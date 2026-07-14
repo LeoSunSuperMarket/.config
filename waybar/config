@@ -1,0 +1,64 @@
+{
+    "reload_style_on_change": true,
+    "layer": "top",
+    "position": "top",
+    "height": 38,
+    "modules-left": [ "cpu", "memory", "temperature", "niri/workspaces", "niri/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["tray",  "network", "pulseaudio", "battery"],
+
+    "cpu": {
+        "icon-size": 22,         
+        "interval": 2,
+        "format": " CPU {usage}%"
+    },
+    "memory": {
+        "icon-size": 22,         
+        "interval": 5,
+        "format": " {}%"
+    },
+    "clock": {
+        "format": "{:%Y-%m-%d %H:%M:%S }",
+        "interval": 1,
+        "padding": "0 10px"   
+    },
+    "temperature": {
+        "interval": 10,
+        "format": "{icon} {temperatureC}°C ",
+        "format-icons": ["", "", "", "", ""],
+        "critical-threshold": 80
+    },
+    "network": {
+        "icon-size": 22,         
+        "format-wifi": "  {signalStrength}%",
+        "format-ethernet": "  {ipaddr}",
+        "format-disconnected": "Disconnected",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "on-click": "nm-connection-editor"  
+    },
+    "tray": {
+        "icon-size": 22,         
+        "spacing": 10,          
+        "show-passive-items": true 
+    },
+    "battery": {
+        "icon-size": 22,         
+        "interval": 60, // 刷新间隔（秒）
+        "format": "{capacity}% {icon}   ", // 显示格式：电量百分比 + 图标
+        "format-icons": ["", "", "", "", ""], // 不同电量对应的图标
+        "states": { // 可选：设置低电量警告阈值
+            "warning": 30,
+            "critical": 15
+        }
+    },
+    "pulseaudio": {
+        "icon-size": 22,         
+        "format": "{volume}% {icon}",
+        "format-muted": "  Muted",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    }
+}
+

@@ -1,0 +1,45 @@
+* {
+    font-family: "Sauce Code Pro Nerd Font";
+    font-size: 18px;
+    min-height: 0;
+}
+#waybar {
+    background: rgba(255, 255, 255, 0.9); /* 纯白或半透明白色背景 */
+    color: #FFFFFF;                        /* 深色文字以保证对比度 */
+}
+window#waybar {
+    background: transparent;
+    color: #ffffff;
+    font-family: "Sauce Code Pro Nerd Font"; /* 使用类似苹果的字体 */
+    font-size: 14px;
+}
+
+#workspaces {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+
+#workspaces button.active {
+    color: #89b4fa;
+    font-weight: bold;
+}
+
+#clock, #memory, #network, #pulseaudio {
+    padding: 0 10px;
+    margin: 0 5px;
+}
+
+#clock{
+    font-size: 18px;
+}
+
+#cava {
+/*    background-color: rgba(255, 0, 0, 0.5);*/ /* 红色半透明背景，方便定位 */
+    color: #ffffff;
+    font-family: "Sauce Code Pro Nerd Font";
+    font-size: 12px;          /* 进一步缩小字体，确保不溢出 */
+    padding: 0 8px;           /* 左右留一点边距，上下设为 0 */
+}
+
